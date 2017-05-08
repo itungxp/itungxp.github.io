@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="fragment" content="!" />
+
+        <title ng-bind="pageTitle + ' | Holiday Pirates'"></title>
+        <meta name="description" content="{{pageDescription}}">
+
+        <link href="/vendor.css" rel="stylesheet">
+        <link href="/app.css" rel="stylesheet">
+    </head>
+
+    <body ng-class="bodyClasses" ng-controller="MainCtrl">
+
+        <div class="page">
+            <common-header></common-header>
+
+            <section class="main">
+                <div ui-view autoscroll="false" id="ui-view"></div>
+            </section>
+
+            <common-footer></common-footer>
+        </div>
+
+        <script src="/vendor.js"></script>
+        <script src="/bundle.js"></script>
+
+    </body>
+    <script type="text/javascript">
+        // Copyright 2014-2017 The Bootstrap Authors
+        // Copyright 2014-2017 Twitter, Inc.
+        // Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    '@-ms-viewport{width:auto!important}'
+                )
+            )
+            document.head.appendChild(msViewportStyle)
+        }
+    </script>
+</html>
